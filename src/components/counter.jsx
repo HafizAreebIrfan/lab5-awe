@@ -28,12 +28,11 @@ class Counter extends Component {
         }));
     }
 
-    // reset = () => {
-    //     this.setState({
-    //         count: 0
-    //     });
-    //     this.props.onReset();
-    // }
+    reset = () => {
+        this.setState({
+            count: 0
+        });
+    }
 
     render() {
         return (
@@ -41,7 +40,7 @@ class Counter extends Component {
                 <h2>Count: {this.state.count}</h2>
 
                 <button onClick={this.increment}>Increment</button>
-                {/* <button onClick={this.reset}>Reset</button> */}
+                <button onClick={this.reset}>Reset</button>
                 <button onClick={this.decrement}>Decrement</button>
             </div>
         );
